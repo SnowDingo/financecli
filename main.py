@@ -13,7 +13,7 @@ def main():
 @app.command("calcfx")
 def calcFX(original: str, convertcurrency: str):
     """
-    Converts certain amount of one currency to another
+    Shows the conversion rate of the first argument's current to another
     """
     exchangerate = currency.fetchCurrentExchangeRate(original,convertcurrency)
     print(f"The exchange rate of {original} to {convertcurrency} is {str(exchangerate)}")
