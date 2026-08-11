@@ -20,8 +20,18 @@ def calcFX(original: str, convertcurrency: str):
     exchangerate = currency.fetchCurrentExchangeRate(original,convertcurrency)
     print(f"The exchange rate of {original} to {convertcurrency} is {str(exchangerate)}")
 
+@app.command("listcurrency")
+def listcurrency():
+    """
+    Shows all the currency this app supports
+    """
+    print(currency.fetchAllAvailableCurrencies())
+
 @app.command("timezone")
 def calcTimezone():
+    """
+    List current time and time of major trading hubs
+    """
     date = datetime.datetime.now()
     print(f"now: " + date.strftime("%b") + " " + date.strftime("%d") + " " + date.strftime("%H") + ":" + date.strftime("%S"))
     datenow = datetime.datetime.now(pytz.utc)
