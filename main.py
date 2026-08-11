@@ -8,7 +8,7 @@ app = typer.Typer()
 @app.command("home")
 def main():
     """
-    Run the main FinanceCLI app
+    Run the Finance CLI app and check for version
     """
     print("▗▄▄▄▖▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖▗▖   ▗▄▄▄▖")
     print(" ▌     █  ▐▛▚▖▐▌▐▌   ▐▌     █  ")
