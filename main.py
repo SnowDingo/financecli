@@ -5,12 +5,17 @@ import pytz
 
 app = typer.Typer()
 
-@app.command("Home")
+@app.command("home")
 def main():
     """
     Run the main FinanceCLI app
     """
-    print("FINANCE CLI")
+    print("▗▄▄▄▖▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖▗▖   ▗▄▄▄▖")
+    print(" ▌     █  ▐▛▚▖▐▌▐▌   ▐▌     █  ")
+    print("▐▛▀▀▘  █  ▐▌ ▝▜▌▐▌   ▐▌     █  ")
+    print("▌   ▗▄█▄▖▐▌  ▐▌▝▚▄▄▖▐▙▄▄▖▗▄█▄▖")
+    print("Version: Beta")
+    print("©SnowDingo 2026-2126")
 
 @app.command("calcfx")
 def calcFX(original: str, convertcurrency: str):
