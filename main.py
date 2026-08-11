@@ -59,5 +59,14 @@ def calcTimezone():
     print("Bejing China: " +now_bj.strftime(fmt))
     return
 
+@app.command("compound")
+def compound(initial:int, rate:float, time:int,compoundpertime:int):
+    """
+    Calculate the result of compound interest over certain time period after time division.
+    For the compoundper enter how many times per year your rate is compounded.
+    """
+    print(str(initial*(1+rate/compoundpertime)**(compoundpertime*time)))
+    return
+
 if __name__ == "__main__":
     app()
